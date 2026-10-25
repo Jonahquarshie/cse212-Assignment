@@ -41,10 +41,10 @@ public static class Arrays
         int startingIndex = data.Count - amount;
 
         // Pull out the elements from the back end
-        List<int> shiftingSegment = data.GetRange(startingIndex, amount );
+        List<int> shiftingSegment = data.GetRange(startingIndex, amount);
 
         // Remove the pulled elements from their original positions
-        data.RemoveRange(startingIndex, amount );
+        data.RemoveRange(startingIndex, amount);
 
         // Inject the segment directly onto the front of the list
         data.InsertRange(0, shiftingSegment);
