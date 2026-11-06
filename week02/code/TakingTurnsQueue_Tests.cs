@@ -104,6 +104,8 @@ public class TakingTurnsQueueTests
         for (int i = 0; i < 10; i++)
         {
             var person = players.GetNextPerson();
+           // Assert.AreEqual(timTurns, infinitePerson.Turns, "...should not have their turns parameter modified...");
+
             Assert.AreEqual(expectedResult[i].Name, person.Name);
         }
 
@@ -135,8 +137,7 @@ public class TakingTurnsQueueTests
             Assert.AreEqual(expectedResult[i].Name, person.Name);
         }
 
-        // Verify that the people with infinite turns really do have infinite turns.
-        var infinitePerson = players.GetNextPerson();
+         var infinitePerson = players.GetNextPerson();
         Assert.AreEqual(timTurns, infinitePerson.Turns, "People with infinite turns should not have their turns parameter modified to a very big number. A very big number is not infinite.");
     }
 
